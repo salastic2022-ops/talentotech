@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, hsl(240, 41%, 3%) 0%, #030005 100%);
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(45deg, #ff6b35, #f7931e, #ffd23f);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+nav {
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+}
+
+section:nth-child(even) {
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+}
+
+h2 {
+    color: #ff6b35;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b35, #f7931e);
+    margin: 10px auto;
+}
+
+.historia-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #ff6b35;
+}
+
+.historia-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.barrios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.barrio-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #4facfe;
+}
+
+.barrio-card:hover {
+    transform: translateY(-5px);
+}
+
+.barrio-card h3 {
+    color: #4facfe;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.barrio-card .presidente {
+    color: #ff6b35;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.presidentes-container {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.presidentes-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.presidentes-container th {
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+.presidentes-container td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.presidentes-container tr:hover {
+    background: #f8f9fa;
+}
+
+.banderas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.bandera-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+
+.bandera-item:hover {
+    transform: scale(1.05);
+}
+
+.bandera-color {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    /* border: 3px solid #ddd;*/
+
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.banderas {
+    width: 200px;
+    height: 100px;
+}
+
+#escudo {
+    width: 400px;
+    height: 300px;
+}
+
+.galeria img {
+    width: 70%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.actividades-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.actividad-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.actividad-item:hover {
+    transform: translateX(5px);
+}
+
+.actividad-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #ff6b35;
+    min-width: 50px;
+}
+
+.actividad-text h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.actividad-text p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: none;
+    font-size: 1.2rem;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presidentes-container {
+        overflow-x: auto;
+    }
+
+    .actividad-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .actividad-icon {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .barrios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
